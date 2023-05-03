@@ -1,0 +1,31 @@
+{
+    "lyrics": {
+        "Author": "Alan Walker",
+        "Album": "Pretty",
+        "songTitle": "Faded",
+        "Lyrics": "These shallow waters never met what I needed I'm letting go a deeper dive Eternal silence of the sea, I'm breathing Alive",
+        "Image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt6837612%2F&psig=AOvVaw2GOM1KZ0XqQCdGLXrEMV_m&ust=1683101481705000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCLjDieOX1v4CFQAAAAAdAAAAABAE",
+        "productionYear": "21 June 2020",
+        "Producer": "Mendes"
+    },
+
+    "lyrics2": {
+        "Author": "2Pac",
+        "Album": "Pretty",
+        "songTitle": "Dear Mama",
+        "Lyrics": "Lady, don't you know we love you? (And dear Mama)Sweet lady, place no one above you (you are appreciated) Sweet lady, don't you know we love you?",
+        "Image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cevirce.com%2Flyrics%2Fen%2F2pac-dear-mama-lyrics.html&psig=AOvVaw3OV1X8YLLIkNtF-7vO6Bnv&ust=1683101150056000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNjT8cWW1v4CFQAAAAAdAAAAABAE",
+        "productionYear": "04 Nov 2000",
+        "Producer": "Bird Man"
+    },
+
+    "lyrics3": {
+        "Author": "Big Joe",
+        "Album": "Pretty",
+        "songTitle": "George",
+        "Lyrics": "Even in the darkness, You will be my light Even when I'm hopeless, You will be my guide I will not be shaken, I will not be moved Even in the chaos, I know that You're good",
+        "Image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DLw1KzRAtpMk&psig=AOvVaw0-nbtHtVavCsHqv5sDbayJ&ust=1683101366397000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCODov6uX1v4CFQAAAAAdAAAAABAE",
+        "productionYear": "16 May 1995",
+        "Producer": "Shawn Paul"
+    }
+}

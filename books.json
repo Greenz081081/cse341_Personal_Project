@@ -1,0 +1,31 @@
+{
+    "books": {
+        "Author": "Toni Morrison",
+        "Language": "English",
+        "bookTitle": "Beloved",
+        "Country": "United States",
+        "Image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DLw1KzRAtpMk&psig=AOvVaw0-nbtHtVavCsHqv5sDbayJ&ust=1683101366397000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCODov6uX1v4CFQAAAAAdAAAAABAE",
+        "publicationYear": "September 1987",
+        "Pages": "324"
+    },
+
+    "books2": {
+        "Author": "Harper Lee",
+        "Language": "English",
+        "bookTitle": "To Kill a Mockingbird",
+        "Country": "United States",
+        "Image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DLw1KzRAtpMk&psig=AOvVaw0-nbtHtVavCsHqv5sDbayJ&ust=1683101366397000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCODov6uX1v4CFQAAAAAdAAAAABAE",
+        "publicationYear": "July 11, 1960",
+        "Pages": "281"
+    },
+
+    "books3": {
+        "Author": "Jane Austen",
+        "Language": "English",
+        "bookTitle": "Pride and Prejudice",
+        "Country": "United Kingdom",
+        "Image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DLw1KzRAtpMk&psig=AOvVaw0-nbtHtVavCsHqv5sDbayJ&ust=1683101366397000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCODov6uX1v4CFQAAAAAdAAAAABAE",
+        "publicationYear": "28 January 1813",
+        "Pages": "344"
+    }
+}
