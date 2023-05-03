@@ -7,6 +7,8 @@ router.get('/', lyricsController.getAll);
 
 router.get('/:id', lyricsController.getSingle);
 
-router.post('/', lyricsController.createContact);
+router.post('/', lyricsController.createLyrics);
+
+router.post('/:id', lyricsController.updateLyrics);
 
 module.exports = router;

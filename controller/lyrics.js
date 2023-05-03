@@ -25,8 +25,8 @@ const getSingle = async (req, res, next) => {
     res.status(200).json(lists[0])
   })
 }
-const createContact = async (req, res) => {
-  const contact = {
+const createLyrics = async (req, res) => {
+  const lyrics = {
     Author: req.body.Author,
     Album: req.body.Album,
     songTitle: req.body.songTitle,
@@ -39,15 +39,40 @@ const createContact = async (req, res) => {
     .getDb()
     .db()
     .collection('lyrics')
-    .insertOne(contact)
+    .insertOne(lyrics)
   if (response.acknowledged) {
     res.status(201).json(response)
   } else {
-    res.status(500).json(response.error || 'Some error occurred while creating the lyric.')
+    res.status(500).json(response.error || 'Some error occurred while creating the lyrics.')
+  }
+}
+const updateLyrics = async (req, res) => {
+  const userId = new ObjectId(req.params.id)
+  // be aware of updateOne if you only want to update specific fields
+  const lyrics = {
+    Author: req.body.Author,
+    Album: req.body.Album,
+    songTitle: req.body.songTitle,
+    Lyrics: req.body.Lyrics,
+    Image: req.body.Image,
+    productionYear: req.body.productionYear,
+    Procucer: req.body.Procucer
+  }
+  const response = await mongodb
+    .getDb()
+    .db()
+    .collection('lyrics')
+    .replaceOne({ _id: userId }, lyrics)
+  console.log(response)
+  if (response.modifiedCount > 0) {
+    res.status(204).send()
+  } else {
+    res.status(500).json(response.error || 'Some error occurred while updating the lyrics.')
   }
 }
 module.exports = {
   getAll,
   getSingle,
-  createContact
+  createLyrics,
+  updateLyrics
 }
