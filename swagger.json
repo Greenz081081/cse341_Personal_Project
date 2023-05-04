@@ -1,100 +1,149 @@
 {
-    "swagger": "2.0",
-    "info": {
-      "title": "Emerald's API",
-      "description": "Lyrics API",
-      "version": "1.0.0"
-    },
-    "host": "cse341-project-ehn4.onrender.com",
-    "basePath": "/",
-    "schemes": [
-      "https"
-    ],
-    "paths": {
-      "/api-docs": {
-        "get": {
-          "description": "",
-          "parameters": [],
-          "responses": {}
+  "swagger": "2.0",
+  "info": {
+    "title": "Emerald API",
+    "description": "Lyrics API",
+    "version": "1.0.0"
+  },
+  "host": "cse341-project-ehn4.onrender.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/lyrics/": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
         }
       },
-      "/lyrics/": {
-        "get": {
-          "description": "",
-          "produces": [
-            "application/json"
-          ],
-          "parameters": [],
-          "responses": {
-            "200": {
-              "description": "OK"
-            }
-          }
-        },
-        "post": {
-          "description": "",
-          "parameters": [
-            {
-              "name": "body",
-              "in": "body",
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "Author": {
-                    "example": "any"
-                  },
-                  "Album": {
-                    "example": "any"
-                  },
-                  "SongTitle": {
-                    "example": "any"
-                  },
-                  "Lyrics": {
-                    "example": "any"
-                  },
-                  "Image": {
-                    "example": "any"
-                  },
-                  "productionYear": {
-                    "example": "any"
-                  },
-                  "Producer": {
-                    "example": "any"
-                  }
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Author": {
+                  "example": "any"
+                },
+                "Album": {
+                  "example": "any"
+                },
+                "songTitle": {
+                  "example": "any"
+                },
+                "Lyrics": {
+                  "example": "any"
+                },
+                "Image": {
+                  "example": "any"
+                },
+                "productionYear": {
+                  "example": "any"
+                },
+                "Procucer": {
+                  "example": "any"
                 }
               }
             }
-          ],
-          "responses": {
-            "201": {
-              "description": "Created"
-            },
-            "500": {
-              "description": "Internal Server Error"
-            }
           }
-        }
-      },
-      "/lyrics/{id}": {
-        "get": {
-          "description": "",
-          "produces": [
-            "application/json"
-          ],
-          "parameters": [
-            {
-              "name": "id",
-              "in": "path",
-              "required": true,
-              "type": "string"
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "OK"
-            }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
+    },
+    "/lyrics/{id}": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Author": {
+                  "example": "any"
+                },
+                "Album": {
+                  "example": "any"
+                },
+                "songTitle": {
+                  "example": "any"
+                },
+                "Lyrics": {
+                  "example": "any"
+                },
+                "Image": {
+                  "example": "any"
+                },
+                "productionYear": {
+                  "example": "any"
+                },
+                "Procucer": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
     }
   }
+}
