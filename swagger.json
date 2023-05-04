@@ -1,14 +1,23 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Emerald API",
+    "title": "Emerald's API",
     "description": "Lyrics API",
     "version": "1.0.0"
   },
   "host": "cse341-project-b7jd.onrender.com",
   "basePath": "/",
-  "schemes": ["https"],
+  "schemes": [
+    "https"
+  ],
   "paths": {
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
     "/lyrics/": {
       "get": {
         "description": "",
@@ -49,7 +58,7 @@
                 "productionYear": {
                   "example": "any"
                 },
-                "Procucer": {
+                "Producer": {
                   "example": "any"
                 }
               }
@@ -86,7 +95,7 @@
           }
         }
       },
-      "post": {
+      "put": {
         "description": "",
         "parameters": [
           {
@@ -119,7 +128,7 @@
                 "productionYear": {
                   "example": "any"
                 },
-                "Procucer": {
+                "Producer": {
                   "example": "any"
                 }
               }
@@ -134,13 +143,25 @@
             "description": "Internal Server Error"
           }
         }
-      }
-    },
-    "/api-docs": {
-      "get": {
+      },
+      "delete": {
         "description": "",
-        "parameters": [],
-        "responses": {}
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     }
   }
