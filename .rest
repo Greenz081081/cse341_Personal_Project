@@ -2,3 +2,6 @@ GET http://localhost:8080/lyrics HTTP/1.1
 
 ###
 POST http://localhost:8080/lyrics/6450c61c3ed83dd54c78ffd2 HTTP/1.1
+
+###
+GET https://cse341-project-ehn4.onrender.com/api-docs
