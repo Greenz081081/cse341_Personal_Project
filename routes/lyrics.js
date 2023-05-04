@@ -1,14 +1,14 @@
-const express = require('express');
-const router = express.Router();
+const express = require('express')
+const router = express.Router()
 
-const lyricsController = require('../controller/lyrics');
+const lyricsController = require('../controller/lyrics')
 
-router.get('/', lyricsController.getAll);
+router.get('/', lyricsController.getAll)
 
-router.get('/:id', lyricsController.getSingle);
+router.get('/:id', lyricsController.getSingle)
 
-router.post('/', lyricsController.createLyrics);
+router.post('/', lyricsController.createLyrics)
 
-router.post('/:id', lyricsController.updateLyrics);
+router.post('/:id', lyricsController.updateLyrics)
 
-module.exports = router;
+module.exports = router
