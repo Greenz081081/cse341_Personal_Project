@@ -5,17 +5,12 @@
     "description": "Lyrics API",
     "version": "1.0.0"
   },
-  "host": "cse341-project-ehn4.onrender.com",
+  "host": "cse341-project-85vp.onrender.com",
   "basePath": "/",
-  "schemes": ["https"],
+  "schemes": [
+    "https"
+  ],
   "paths": {
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "parameters": [],
-        "responses": {}
-      }
-    },
     "/lyrics/": {
       "get": {
         "description": "",
@@ -56,7 +51,7 @@
                 "productionYear": {
                   "example": "any"
                 },
-                "Producer": {
+                "Procucer": {
                   "example": "any"
                 }
               }
@@ -93,7 +88,7 @@
           }
         }
       },
-      "put": {
+      "post": {
         "description": "",
         "parameters": [
           {
@@ -126,7 +121,7 @@
                 "productionYear": {
                   "example": "any"
                 },
-                "Producer": {
+                "Procucer": {
                   "example": "any"
                 }
               }
@@ -141,25 +136,13 @@
             "description": "Internal Server Error"
           }
         }
-      },
-      "delete": {
+      }
+    },
+    "/api-docs": {
+      "get": {
         "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
+        "parameters": [],
+        "responses": {}
       }
     }
   }

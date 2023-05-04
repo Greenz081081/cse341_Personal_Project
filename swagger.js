@@ -5,7 +5,7 @@ const doc = {
     title: 'Emerald API',
     description: 'Lyrics API'
   },
-  host: 'cse341-project-ehn4.onrender.com',
+  host: 'cse341-project-85vp.onrender.com',
   schemes: ['https']
 }
 const outputFile = './swagger.json'
