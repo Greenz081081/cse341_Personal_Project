@@ -16,7 +16,7 @@
         "responses": {}
       }
     },
-    "/contacts/": {
+    "/lyrics/": {
       "get": {
         "description": "",
         "produces": [
@@ -73,7 +73,7 @@
         }
       }
     },
-    "/contacts/{id}": {
+    "/lyrics/{id}": {
       "get": {
         "description": "",
         "produces": [
