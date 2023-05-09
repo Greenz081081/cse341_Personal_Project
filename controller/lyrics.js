@@ -38,7 +38,7 @@ const createLyrics = async (req, res) => {
       Lyrics: req.body.Lyrics,
       Image: req.body.Image,
       productionYear: req.body.productionYear,
-      Procucer: req.body.Procucer
+      Producer: req.body.Producer
     }
     const response = await mongodb
       .getDb()
@@ -69,7 +69,7 @@ const updateLyrics = async (req, res) => {
       Lyrics: req.body.Lyrics,
       Image: req.body.Image,
       productionYear: req.body.productionYear,
-      Procucer: req.body.Procucer
+      Producer: req.body.Producer
     }
     const response = await mongodb
       .getDb()
