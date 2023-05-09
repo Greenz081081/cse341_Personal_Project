@@ -87,27 +87,20 @@ const updateLyrics = async (req, res) => {
   }
 }
 const deleteLyrics = async (req, res) => {
-  try {
-    if (!req.body.userId) {
-      res.status(400).send({ message: 'Content can not be empty!' })
-      return
-    }
-    const userId = new ObjectId(req.params.id)
-    const response = await mongodb
-      .getDb()
-      .db()
-      .collection('lyrics')
-      .deleteOne({ _id: userId }, true)
-    console.log(response)
-    if (response.deletedCount > 0) {
-      res.status(204).send()
-    } else {
-      res.status(500).json(response.error || 'Some error occurred while deleting the contact.')
-    }
-  } catch (err) {
-    res.status(500).json(err)
+  const userId = new ObjectId(req.params.id)
+  const response = await mongodb
+    .getDb()
+    .db()
+    .collection('lyrics')
+    .deleteOne({ _id: userId }, true)
+  console.log(response)
+  if (response.deletedCount > 0) {
+    res.status(204).send()
+  } else {
+    res.status(500).json(response.error || 'Some error occurred while deleting the contact.')
   }
 }
+
 module.exports = {
   getAll,
   getSingle,
