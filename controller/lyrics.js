@@ -97,7 +97,7 @@ const deleteLyrics = async (req, res) => {
   if (response.deletedCount > 0) {
     res.status(204).send()
   } else {
-    res.status(500).json(response.error || 'Some error occurred while deleting the contact.')
+    res.status(500).json(response.error || 'Some error occurred while deleting the lyrics.')
   }
 }
 
