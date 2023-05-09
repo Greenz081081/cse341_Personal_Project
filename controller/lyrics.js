@@ -2,44 +2,28 @@ const mongodb = require('../db/connect')
 const ObjectId = require('mongodb').ObjectId
 
 const getAll = async (req, res, next) => {
-  try {
-    if (!req.body.Author || !req.body.Album || !req.body.songTitle || !req.body.Lyrics || !req.body.Image || !req.body.productionYear || !req.body.Producer) {
-      res.status(400).send({ message: 'Content can not be empty!' })
-      return
-    }
-    const result = await mongodb
-      .getDb()
-      .db()
-      .collection('lyrics')
-      .find()
-    result.toArray().then((lists) => {
-      res.setHeader('Content-Type', 'application/json')
-      res.status(200).json(lists)
-    })
-  } catch (err) {
-    res.status(500).json(err)
-  }
+  const result = await mongodb
+    .getDb()
+    .db()
+    .collection('lyrics')
+    .find()
+  result.toArray().then((lists) => {
+    res.setHeader('Content-Type', 'application/json')
+    res.status(200).json(lists)
+  })
 }
 
 const getSingle = async (req, res, next) => {
-  try {
-    if (!req.body.userId) {
-      res.status(400).send({ message: 'Content can not be empty!' })
-      return
-    }
-    const userId = new ObjectId(req.params.id)
-    const result = await mongodb
-      .getDb()
-      .db()
-      .collection('lyrics')
-      .find({ _id: userId })
-    result.toArray().then((lists) => {
-      res.setHeader('Content-Type', 'application/json')
-      res.status(200).json(lists[0])
-    })
-  } catch (err) {
-    res.status(500).json(err)
-  }
+  const userId = new ObjectId(req.params.id)
+  const result = await mongodb
+    .getDb()
+    .db()
+    .collection('lyrics')
+    .find({ _id: userId })
+  result.toArray().then((lists) => {
+    res.setHeader('Content-Type', 'application/json')
+    res.status(200).json(lists[0])
+  })
 }
 const createLyrics = async (req, res) => {
   try {
