@@ -2,11 +2,13 @@ const swaggerAutogen = require('swagger-autogen')()
 
 const doc = {
   info: {
-    title: 'Emerald API',
-    description: 'Lyrics API'
+    title: 'Personal Assignment 6',
+    description: 'Lyrics and Books API'
   },
-  host: 'cse341-project-b7jd.onrender.com',
-  schemes: ['https']
+  host: 'localhost:8080',
+  schemes: ['http']
+  // host: 'cse341-project-b7jd.onrender.com',
+  // schemes: ['https']
 }
 const outputFile = './swagger.json'
 const endpointsFiles = ['./routes/index.js']

@@ -7,6 +7,8 @@ const router = express.Router();
 
 // eslint-disable-next-line semi
 router.use('/lyrics', require('./lyrics'));
+
+router.use('/books', require('./books'))
 // router.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 router.use('/', require('./swagger'))
 

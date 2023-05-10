@@ -1,6 +1,9 @@
 GET http://localhost:8080/lyrics HTTP/1.1
 
 ###
+GET http://localhost:8080/books HTTP/1.1
+
+###
 POST http://localhost:8080/lyrics/6450c6073ed83dd54c78ffd0 HTTP/1.1
 
 ###
