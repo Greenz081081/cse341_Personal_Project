@@ -5,8 +5,8 @@ const doc = {
     title: 'Personal Assignment 6',
     description: 'Lyrics and Books API'
   },
-  host: 'localhost:8080',
-  schemes: ['http']
+  host: 'cse341-project-b7jd.onrender.com',
+  schemes: ['https']
   // host: 'cse341-project-b7jd.onrender.com',
   // schemes: ['https']
 }
